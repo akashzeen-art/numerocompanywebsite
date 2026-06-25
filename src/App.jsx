@@ -10,22 +10,18 @@ import Services from './pages/Services'
 function AppRoutes() {
   const location = useLocation()
   const [showPreloader, setShowPreloader] = useState(true)
-  const [preloaderKey, setPreloaderKey] = useState(0)
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    setShowPreloader(true)
-    setPreloaderKey((key) => key + 1)
   }, [location.pathname])
 
   const handlePreloaderComplete = useCallback(() => {
     setShowPreloader(false)
-    window.scrollTo(0, 0)
   }, [])
 
   return (
     <>
-      {showPreloader && <Preloader key={preloaderKey} onComplete={handlePreloaderComplete} />}
+      {showPreloader && <Preloader onComplete={handlePreloaderComplete} />}
       <Routes location={location}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

@@ -71,25 +71,31 @@ export const services = [
   },
 ]
 
-export const portfolioItems = [
-  {
-    image: 'portfolio2.jpg',
-    title: 'Enterprise Cloud Transformation',
-    category: 'Cloud Infrastructure',
-  },
-  {
-    image: 'portfolio3.jpg',
-    title: 'Managed IT Operations',
-    category: 'Managed Services',
-  },
-  {
-    image: 'portfolio7.jpg',
-    title: 'Digital Workflow Automation',
-    category: 'Automation',
-  },
-]
+export const portfolioGallery = [
+  'portfolio2.jpg',
+  'portfolio3.jpg',
+  'portfolio4.jpg',
+  'portfolio5.jpg',
+  'portfolio6.jpg',
+  'portfolio7.jpg',
+  'portfolio9.jpg',
+  'portfolio10.jpg',
+  'portfolio11.jpg',
+  'portfolio12.jpg',
+  'portfolio13.jpg',
+  'portfolio14.jpg',
+  'portfolio15.jpg',
+  'portfolio16.jpg',
+].map((image, index) => ({
+  image,
+  alt: `Portfolio project ${index + 1}`,
+  title: `Portfolio Project ${index + 1}`,
+  category: 'Numero Info IT Services',
+}))
 
-export const homePortfolio = portfolioItems.map((item) => item.image)
+export const portfolioItems = portfolioGallery
+
+export const homePortfolio = portfolioGallery.map((item) => item.image)
 
 export const portfolioImages = homePortfolio
 
@@ -118,17 +124,17 @@ export const aboutHighlights = [
 
 export const teamMembers = [
   {
-    img: 'about-img.png',
+    img: 'anand-khanna-profile-image-225x300.jpg',
     name: 'Mr. Anand Khanna',
     role: 'Business Head Founder Member',
   },
   {
-    img: 'about-img.png',
+    img: 'mamta.jpg',
     name: 'Mamta Parashar',
     role: 'Founder',
   },
   {
-    img: 'about-img.png',
+    img: 'd7604cd7-5afa-49e1-b97d-8746a9a3b3d6-compressed-300x300.jpg',
     name: 'Mr. Roshan Singh',
     role: 'Digital Head',
   },
